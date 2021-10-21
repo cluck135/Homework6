@@ -18,43 +18,85 @@
             <h1>Weather Forecast</h1>
         </header>
     <main class="row">
-        <div class="col-3">
-            <form action="/action_page.php">
+        <div class="col-2">
+            <form class="search">
                 <div class="form-group">
                 <label for="city">City:</label>
-                <input type="city" class="form-control" id="city">
+                <input type="text" name="city" class="form-control" id="city">
                 </div>
-                <button type="submit" class="btn btn-default">Submit</button>
+                <button type="submit" class="btn btn-primary" id="submit">Submit</button>
             </form>
-            <div class="btn-group-vertical">
-                <button type="button" class="btn btn-info">New York</button>
-                <!-- This is where search history will go New york btn is temporary -->
+            <div class="btn-group-vertical searchHistory">
+                <!-- This is where search history buttonw will go -->
             </div>
         </div>
-        <div class="col-9">
+        <div class="col-10">
             <section>
-                <h1> City Name temp</h1>
-                <h3>Temperature:</h3>
-                <h3>Wind:</h3>
-                <h3>Humidity:</h3>
-                <h3>UV index:</h3>
+                <h1 id="cityName">City name</h1>
+                <div>
+                  <h3 class="inline">Temperature: <p class="inline" id="currentTemp"></p></h3>
+                </div>
+                <div>
+                  <h3 class="inline">Wind: <p class="inline" id="currentWind"></p></h3>
+                </div>
+                <div>
+                  <h3 class="inline">Humidity: <p class="inline" id="currentHum"></p></h3>
+                </div>
+                <div>
+                  <h3 class="inline">UV index <p class="inline" id="currentUvi"></p></h3>
+                </div>
             </section>
-            <div>
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="..." alt="Card image cap">
+            <label for="fiveDay" style="font-size: 40px; font-weight: 500;">Five Day Forecast</label>
+            <div type="fiveDay" class="row">
+                <div class="card" style="width: 15rem;">
                     <div class="card-body">
                       <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item">Cras justo odio</li>
                       <li class="list-group-item">Dapibus ac facilisis in</li>
                       <li class="list-group-item">Vestibulum at eros</li>
                     </ul>
+                  </div>
+                  <div class="card" style="width: 15rem;">
                     <div class="card-body">
-                      <a href="#" class="card-link">Card link</a>
-                      <a href="#" class="card-link">Another link</a>
+                      <h5 class="card-title">Card title</h5>
                     </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Cras justo odio</li>
+                      <li class="list-group-item">Dapibus ac facilisis in</li>
+                      <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                  </div>
+                  <div class="card" style="width: 15rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Cras justo odio</li>
+                      <li class="list-group-item">Dapibus ac facilisis in</li>
+                      <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                  </div>
+                  <div class="card" style="width: 15rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Cras justo odio</li>
+                      <li class="list-group-item">Dapibus ac facilisis in</li>
+                      <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                  </div>
+                  <div class="card" style="width: 15rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Cras justo odio</li>
+                      <li class="list-group-item">Dapibus ac facilisis in</li>
+                      <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
                   </div>
             </div>
         </div>

@@ -6,3 +6,28 @@ header{
 #grad {
     background-image: linear-gradient(to right,skyblue, navy);
   }
+#submit{
+    margin: 5px;
+}
+.inline{
+    display: inline;
+}
+#uviFavorable{
+    background-color: green;
+    width:fit-content;
+    padding: 0px 10px;
+    border-radius: 20%;
+    color: white;
+}
+#uviModerate{
+    background-color: lightsalmon;
+    width: auto;
+    border-radius: 20%;
+    color: white;
+}
+#uviSevere{
+    background-color: red;
+    width: auto;
+    border-radius: 20%;
+    color: white;
+}
