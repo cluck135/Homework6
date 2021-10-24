@@ -10,6 +10,7 @@ header{
 #submit{
     margin: 5px;
 }
+/* styling for history section */
 #history{
     width: 100%;
 }
@@ -19,15 +20,16 @@ header{
 #history .btn{
     width: 100%;
 }
-
 .inline{
     display: inline;
 }
+/* current weather */
 section{
     border: solid black 2px;
     padding: 5px
     
 }
+/* different color for the UVI */
 #uviFavorable{
     background-color: green;
     width:fit-content;

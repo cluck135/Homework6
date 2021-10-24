@@ -35,8 +35,9 @@ let hum5 = document.querySelector("#hum5")
 
 
 let history = []
+// my API key
 let apiKey = 'a3ea5df50f7a2a8c7c090c87406c6487';
-
+// gets the data from the api and sends the lattitude and longitude along with the data to the current weather function 
 function getWeatherData(url){
 fetch(url)
   .then(function (response) {
@@ -56,7 +57,7 @@ fetch(url)
     currentWeather(locationLat, locationLon, weatherData)
   });
 }
-
+// pulls the weather data from the lattitude and longitude that was sent into the function
 function currentWeather(lat, lon, data){
     let url = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&units=imperial&exclude=hourly,minutely&appid=' + apiKey
     let location = data.name;
@@ -71,6 +72,7 @@ function currentWeather(lat, lon, data){
       
     }).then(function (data) {
       console.log(data);
+      // sets all the data for the current weather to the dashboard
       let weatherData = data
       let temp = weatherData.current.temp
       let wind = weatherData.current.wind_speed
@@ -86,7 +88,7 @@ function currentWeather(lat, lon, data){
       currentWind.textContent = wind + ' MPH'
       currentHum.textContent = hum
       currentUvi.textContent = uvi
-
+        //sets the correct color for the UVI rating
       if(uvi < 3){
         currentUvi.setAttribute("id", 'uviFavorable')
       }else if(uvi >= 3 && uvi < 6){
@@ -94,6 +96,7 @@ function currentWeather(lat, lon, data){
       }else {
         currentUvi.setAttribute("id", 'uviSevere')
       }
+      // daily weather is next to be displayed, data is sent to it to be used
       dailyWeather(weatherData);
 
     });
@@ -102,15 +105,18 @@ function currentWeather(lat, lon, data){
 function dailyWeather(weatherData) {
     let days = weatherData.daily;
     for(let i = 0; i<5; i++){
+
         let temp = days[i].temp.day
         let icon = days[i].weather[0].icon
         let iconUrl = "https://openweathermap.org/img/wn/" + icon + ".png"
         let hum = days[i].humidity
         let wind = days[i].wind_speed
+        // determines the date of the card to be displayed next
         let unix = days[i].dt
         let milliseconds = unix * 1000
         let date = new Date(milliseconds)
         let dateFormat = date.toLocaleString("en-US").split(',')[0]
+        // each case is a different card on the dashboard for data to be displayed on
         switch(i){
             case 0: 
                 date1.textContent = dateFormat
@@ -160,7 +166,7 @@ function dailyWeather(weatherData) {
         }
     }
 }
-
+// checks if there is any history from local storage to be loaded after refresh 
 if(localStorage.getItem("entry") != null){
     let loadHistory = JSON.parse(localStorage.getItem("entry"))
     for(let i = 0; i<loadHistory.length; i++){
@@ -170,7 +176,7 @@ if(localStorage.getItem("entry") != null){
         searchHistory.appendChild(btn)
     }
 }
-
+// adds history to the left side of dashboard
 function AddHistory(check){
     if(check == 1){
     let loadHistory = JSON.parse(localStorage.getItem("entry"))
@@ -183,10 +189,10 @@ function AddHistory(check){
     }
 }
 }
-
+// sets what city is to be serched in the api
 function searchLog(event){
     event.preventDefault();
-    let check = 1;
+    let check = 1; // used to check if the entry is a repeating city so it doesnt log the same history twice
     let apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q='+ entryText.value + '&units=imperial&APPID=' + apiKey;
     if (entryText.value){
         let entry = entryText.value;
@@ -206,12 +212,14 @@ function searchLog(event){
             localStorage.setItem("entry", JSON.stringify(history))
         }
     }
+    //check is sent to history to determine if the entry has been added or not yet, if it has it will skip the code inside
     AddHistory(check);
+    // url is sent to be used to pull data from
     getWeatherData(apiUrl);
 }
     
 
-
+// event listener for the history buttons on the side of the screen
 reSearch.addEventListener("click", function (event){
         let searchHist = event.target.localName;
         let targetData = event.target
@@ -221,7 +229,5 @@ reSearch.addEventListener("click", function (event){
             getWeatherData(apiUrl);
         }
 })
-
-
 
 search.addEventListener("submit", searchLog);
