@@ -1,4 +1,3 @@
-//let url = 'http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=a3ea5df50f7a2a8c7c090c87406c6487'
 let search = document.querySelector(".search")
 let entryText = document.querySelector("#city")
 let searchHistory = document.querySelector(".searchHistory")
@@ -188,7 +187,7 @@ function AddHistory(check){
 function searchLog(event){
     event.preventDefault();
     let check = 1;
-    let apiUrl = 'http://api.openweathermap.org/data/2.5/weather?q='+ entryText.value + '&units=imperial&APPID=' + apiKey;
+    let apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q='+ entryText.value + '&units=imperial&APPID=' + apiKey;
     if (entryText.value){
         let entry = entryText.value;
         if(localStorage.getItem("entry") != null){
@@ -218,7 +217,7 @@ reSearch.addEventListener("click", function (event){
         let targetData = event.target
         if(searchHist == 'button'){
             let newSearch = targetData.innerText;
-            let apiUrl = 'http://api.openweathermap.org/data/2.5/weather?q='+ newSearch + '&units=imperial&APPID=' + apiKey;
+            let apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q='+ newSearch + '&units=imperial&APPID=' + apiKey;
             getWeatherData(apiUrl);
         }
 })
