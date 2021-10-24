@@ -104,7 +104,7 @@ function currentWeather(lat, lon, data){
 
 function dailyWeather(weatherData) {
     let days = weatherData.daily;
-    for(let i = 0; i<5; i++){
+    for(let i = 1; i<6; i++){
 
         let temp = days[i].temp.day
         let icon = days[i].weather[0].icon
@@ -118,7 +118,7 @@ function dailyWeather(weatherData) {
         let dateFormat = date.toLocaleString("en-US").split(',')[0]
         // each case is a different card on the dashboard for data to be displayed on
         switch(i){
-            case 0: 
+            case 1: 
                 date1.textContent = dateFormat
                 let img1 = document.createElement("img")
                 img1.setAttribute("src", iconUrl)
@@ -127,7 +127,7 @@ function dailyWeather(weatherData) {
                 wind1.textContent = 'Wind: ' + wind + '  MPH'
                 hum1.textContent = 'Humidity: ' + hum + '%'
                 break;
-            case 1:
+            case 2:
                 date2.textContent = dateFormat
                 let img2 = document.createElement("img")
                 img2.setAttribute("src", iconUrl)
@@ -136,7 +136,7 @@ function dailyWeather(weatherData) {
                 wind2.textContent = 'Wind: ' + wind + ' MPH'
                 hum2.textContent = 'Humidity: ' + hum + '%'
                 break;
-            case 2:
+            case 3:
                 date3.textContent = dateFormat
                 let img3 = document.createElement("img")
                 img3.setAttribute("src", iconUrl)
@@ -145,7 +145,7 @@ function dailyWeather(weatherData) {
                 wind3.textContent = 'Wind: ' + wind + ' MPH'
                 hum3.textContent = 'Humidity: ' + hum + '%'
                 break;
-            case 3:
+            case 4:
                 date4.textContent = dateFormat
                 let img4 = document.createElement("img")
                 img4.setAttribute("src", iconUrl)
@@ -154,7 +154,7 @@ function dailyWeather(weatherData) {
                 wind4.textContent = 'Wind: ' + wind + ' MPH'
                 hum4.textContent = 'Humidity: ' + hum + '%'
                 break;
-            case 4:
+            case 5:
                 date5.textContent = dateFormat
                 let img5 = document.createElement("img")
                 img5.setAttribute("src", iconUrl)
