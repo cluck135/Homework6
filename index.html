@@ -24,15 +24,17 @@
                 <label for="city">City:</label>
                 <input type="text" name="city" class="form-control" id="city">
                 </div>
-                <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                </div>
             </form>
-            <div class="btn-group-vertical searchHistory">
+            <div class="btn-group-vertical searchHistory" id="history">
                 <!-- This is where search history buttonw will go -->
             </div>
         </div>
         <div class="col-10">
             <section>
-                <h1 id="cityName">City name</h1>
+                <h1 id="cityName">City name<img id="icon" src="" alt="Weather Icon"></h1>
                 <div>
                   <h3 class="inline">Temperature: <p class="inline" id="currentTemp"></p></h3>
                 </div>
@@ -43,59 +45,59 @@
                   <h3 class="inline">Humidity: <p class="inline" id="currentHum"></p></h3>
                 </div>
                 <div>
-                  <h3 class="inline">UV index <p class="inline" id="currentUvi"></p></h3>
+                  <h3 class="inline">UV index: <p class="inline" id="currentUvi"></p></h3>
                 </div>
             </section>
             <label for="fiveDay" style="font-size: 40px; font-weight: 500;">Five Day Forecast</label>
             <div type="fiveDay" class="row">
                 <div class="card" style="width: 15rem;">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
+                      <h5 class="card-title" id="date1">Card title<img id="icon1" src="" alt="Weather Icon"></h5>
                     </div>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item">Cras justo odio</li>
-                      <li class="list-group-item">Dapibus ac facilisis in</li>
-                      <li class="list-group-item">Vestibulum at eros</li>
+                      <li class="list-group-item" id="temp1">Cras justo odio</li>
+                      <li class="list-group-item" id="hum1">Dapibus ac facilisis in</li>
+                      <li class="list-group-item" id="wind1">Vestibulum at eros</li>
                     </ul>
                   </div>
                   <div class="card" style="width: 15rem;">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
+                      <h5 class="card-title" id="date2">Card title<img id="icon2" src="" alt="Weather Icon"></h5>
                     </div>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item">Cras justo odio</li>
-                      <li class="list-group-item">Dapibus ac facilisis in</li>
-                      <li class="list-group-item">Vestibulum at eros</li>
+                      <li class="list-group-item" id="temp2">Cras justo odio</li>
+                      <li class="list-group-item" id="hum2">Dapibus ac facilisis in</li>
+                      <li class="list-group-item" id="wind2">Vestibulum at eros</li>
                     </ul>
                   </div>
                   <div class="card" style="width: 15rem;">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
+                      <h5 class="card-title" id="date3">Card title<img id="icon3" src="" alt="Weather Icon"></h5>
                     </div>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item">Cras justo odio</li>
-                      <li class="list-group-item">Dapibus ac facilisis in</li>
-                      <li class="list-group-item">Vestibulum at eros</li>
+                      <li class="list-group-item" id="temp3">Cras justo odio</li>
+                      <li class="list-group-item" id="hum3">Dapibus ac facilisis in</li>
+                      <li class="list-group-item" id="wind3">Vestibulum at eros</li>
                     </ul>
                   </div>
                   <div class="card" style="width: 15rem;">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
+                      <h5 class="card-title" id="date4">Card title<img id="icon4" src="" alt="Weather Icon"></h5>
                     </div>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item">Cras justo odio</li>
-                      <li class="list-group-item">Dapibus ac facilisis in</li>
-                      <li class="list-group-item">Vestibulum at eros</li>
+                      <li class="list-group-item" id="temp4">Cras justo odio</li>
+                      <li class="list-group-item" id="hum4">Dapibus ac facilisis in</li>
+                      <li class="list-group-item" id="wind4">Vestibulum at eros</li>
                     </ul>
                   </div>
                   <div class="card" style="width: 15rem;">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
+                      <h5 class="card-title" id="date5">Card title<img id="icon5" src="" alt="Weather Icon"></h5>
                     </div>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item">Cras justo odio</li>
-                      <li class="list-group-item">Dapibus ac facilisis in</li>
-                      <li class="list-group-item">Vestibulum at eros</li>
+                      <li class="list-group-item" id="temp5">Cras justo odio</li>
+                      <li class="list-group-item" id="hum5">Dapibus ac facilisis in</li>
+                      <li class="list-group-item" id="wind5">Vestibulum at eros</li>
                     </ul>
                   </div>
             </div>

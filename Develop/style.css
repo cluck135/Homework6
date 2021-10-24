@@ -1,3 +1,4 @@
+
 header{
     text-align: center;
     color: white;
@@ -9,25 +10,42 @@ header{
 #submit{
     margin: 5px;
 }
+#history{
+    width: 100%;
+}
+#history button{
+    margin: 2px;
+}
+#history .btn{
+    width: 100%;
+}
+
 .inline{
     display: inline;
+}
+section{
+    border: solid black 2px;
+    padding: 5px
+    
 }
 #uviFavorable{
     background-color: green;
     width:fit-content;
     padding: 0px 10px;
-    border-radius: 20%;
+    border-radius: 5px 15px;
     color: white;
 }
 #uviModerate{
     background-color: lightsalmon;
     width: auto;
-    border-radius: 20%;
+    padding: 0px 10px;
+    border-radius: 5px 15px;
     color: white;
 }
 #uviSevere{
     background-color: red;
     width: auto;
-    border-radius: 20%;
+    padding: 0px 10px;
+    border-radius: 5px 15px;
     color: white;
 }
