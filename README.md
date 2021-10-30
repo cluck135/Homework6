@@ -31,6 +31,6 @@ I learned a lot more about how to use fetch for APIs as well as how to navigate 
 Screenshots below!
 ![Image of website](./Assets/weatherDash.PNG )
 
-Link to Password Generator
+Link to Weather Dashboard
 [Password Generator](https://cluck135.github.io/Weather-Dashboard/)
 
