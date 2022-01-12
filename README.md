@@ -41,7 +41,7 @@ Email me your questions at: [casenluck@gmail.com](mailto:casenluck@gmail.com)
 Screenshots below!
 ![Image of website](./Assets/weatherDash.PNG )
 
-Link to Password Generator
+Link to Weather Dashboard
 [Password Generator](https://cluck135.github.io/Weather-Dashboard/)
 
 
