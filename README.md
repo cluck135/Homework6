@@ -18,9 +18,7 @@ npm i
 ```
 
 ## Usage Information
-```
-node index.js
-```
+right click index.html and open in browser
 
 ## Contribution Guidelines
 Open Source
