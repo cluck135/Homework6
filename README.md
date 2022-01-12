@@ -1,36 +1,49 @@
 # Weather Dashboard
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](https://opensource.org/licenses/MIT)
 
-This projects title is Weather Dashboard and it is a website that I coded the javascript,html,css for using my new found coding skills so that it follows acceptance criteria. 
+## Description
+Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
 
-## Languages
+## Table of Contents
+- [Installation Instructions](#installation-instructions)
+- [Usage Information](#usage-information)
+- [Contribution Guidelines](#contribution-guidelines)
+- [Test Instructions](#test-instructions)
+- [Questions](#questions)
+- [project](#project)
 
-javascript
-css
-html
+## Installation Instructions
+```
+npm i
+```
 
-## Objective
+## Usage Information
+```
+node index.js
+```
 
-GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-WHEN I view the UV index
-THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
+## Contribution Guidelines
+Open Source
 
-## What was learned
+## Test Instructions
+N/A
 
-I learned a lot more about how to use fetch for APIs as well as how to navigate an API and pull data from it with loops and switch case. I also learned a lot more on how to utilize local storage to store data and use the data later on in the program. I got more aquainted with using New Date in js
+## License
+This project is licensed under the terms of the [MIT](https://opensource.org/licenses/MIT) license
 
-## Project pictures/websitelink 
+## Questions
+My Github Profile: [cluck135](https://github.com/cluck135)
+
+Email me your questions at: [casenluck@gmail.com](mailto:casenluck@gmail.com)
+
+## Project 
 
 Screenshots below!
 ![Image of website](./Assets/weatherDash.PNG )
 
 Link to Password Generator
 [Password Generator](https://cluck135.github.io/Weather-Dashboard/)
+
+
+
 
