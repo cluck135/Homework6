@@ -30,7 +30,6 @@ Email me your questions at: [casenluck@gmail.com](mailto:casenluck@gmail.com)
 
 ## Project 
 
-Screenshots below!
 ![Image of website](./Assets/weatherDash.PNG )
 
 Link to Weather Dashboard
