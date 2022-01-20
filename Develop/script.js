@@ -7,6 +7,7 @@ let currentTemp = document.querySelector("#currentTemp")
 let currentWind = document.querySelector("#currentWind")
 let currentHum = document.querySelector("#currentHum")
 let currentUvi = document.querySelector("#currentUvi")
+let fiveDayForecast = document.getElementsByClassName("fiveDayForecast")
 let date1 = document.querySelector("#date1")
 let icon1 = document.querySelector("#icon1")
 let temp1 = document.querySelector("#temp1")
@@ -32,6 +33,10 @@ let icon5 = document.querySelector("#icon5")
 let temp5 = document.querySelector("#temp5")
 let wind5 = document.querySelector("#wind5")
 let hum5 = document.querySelector("#hum5")
+
+if (date1.value == null) {
+    fiveDayForecast[0].style.display = "none";
+}
 
 
 let history = []
@@ -103,6 +108,7 @@ function currentWeather(lat, lon, data){
 }
 
 function dailyWeather(weatherData) {
+    fiveDayForecast[0].style.display = "flex";
     let days = weatherData.daily;
     for(let i = 1; i<6; i++){
 
