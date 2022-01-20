@@ -23,6 +23,9 @@ header{
 .inline{
     display: inline;
 }
+.row {
+    margin: 0;
+}
 /* current weather */
 section{
     border: solid black 2px;
@@ -50,4 +53,11 @@ section{
     padding: 0px 10px;
     border-radius: 5px 15px;
     color: white;
+}
+
+@media (max-width: 575px) { 
+    section {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
 }
